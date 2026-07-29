@@ -1,39 +1,51 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-node_modules
+# ─── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
 .pnp
 .pnp.js
 .yarn/install-state.gz
 
-# testing
-coverage
-
-# next.js
+# ─── Build outputs ─────────────────────────────────────────────────────────────
 .next/
 out/
+build/
+dist/
 
-# production
-build
+# ─── Testing ───────────────────────────────────────────────────────────────────
+coverage/
 
-# misc
-.DS_Store
+# ─── Environment / Secrets ─────────────────────────────────────────────────────
+# Never commit real env files — use .env.sample / .env.example as templates
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
 *.pem
+certificates/
 
-# debug
+# ─── Temporary / Processing files ──────────────────────────────────────────────
+tmp/
+temp/
+video-processing/tmp/
+
+# ─── Logs ──────────────────────────────────────────────────────────────────────
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-.env
+# ─── OS & Editor files ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 
-# vercel
-.vercel
-
-# typescript
+# ─── TypeScript ────────────────────────────────────────────────────────────────
 *.tsbuildinfo
 next-env.d.ts
 
-certificates
+# ─── Vercel ────────────────────────────────────────────────────────────────────
+.vercel
